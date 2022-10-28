@@ -103,12 +103,15 @@ p{
     text-align: center;
 }
 
-.workGrid{
+.containerGrid{
     display: grid;
+    margin-bottom: 10%;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
     grid-area: span;
     float: center;
+    justify-content: space-between;
+    align-content: center;
   }
    
 
@@ -119,8 +122,8 @@ p{
     border-color: rgb(160, 60, 60);
     border-width: 15px;
     color: black;
-    height: 260;
-    width: 240px;
+    height: 240px;
+    width: 300px;
     text-align: center;
 }
 
@@ -177,27 +180,34 @@ p{
 }
 
 
-footer{
-    background-color: rgb(227, 227, 227);
+.footer{
+    flex-shrink: 0;
 }
 
-Footer li {
+footer li {
     font-family: 'Gowun Batang', serif;
-    font-size: large; 
+    font-size: 25px; 
     display: inline-block;
-    padding: 1.5%;
+    padding: 3%;
 }
 
-@media only screen and (max-width:600){
-#flex-container {
+@media only screen and (max-width:600px){
+.flex-container {
     display: flex;
+    flex: 100%;
+    max-width: 100%;
     flex-direction: column;
 }
 }
 
-@media only screen and (max-width:600){
-        #flex-container {
-    grid-template-rows: 300px 300px 300px 300px;
+@media only screen and (max-width:600px){
+.containerGrid {
+    display: grid;
+    margin-bottom: 10%;
+    float: center;
+    justify-content: space-between;
+    align-content: center;
+    grid-template-rows: 25% 25% 25% 25%;
     grid-template-columns: 1fr;
     grid-template-areas:
     "skill1"
